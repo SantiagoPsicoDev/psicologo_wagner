@@ -258,8 +258,7 @@
                 <i class="fas fa-walking" style="font-size: 2.5rem; color: var(--azul-electrico);"></i>
                 <h3>Movimiento</h3>
                 <p>Sesiones de integración somática.</p>
-                <a href="#" class="btn-clase">Info</a>
-            </div>
+<a href="javascript:void(0)" onclick="abrirModal()" class="btn-clase">Ver detalles</a>            </div>
         </div>
     </section>
 
@@ -285,8 +284,8 @@
 </div>
 
 <div class="social-container">
-    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-    <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.instagram.com/metodo_wagner?igsh=MW1ncGZmOGN4dDlodA%3D%3D&utm_source=qr" class="social-link"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@csomatic?_r=1&_d=efl7mca7e6cg84&sec_uid=MS4wLjABAAAAmfuLFKswDJGIzEaNvaU2MqOyYRRK0Pp0Fa9tb0UxsI3xNYdG0mWU4i-S8m2cgm6U&share_author_id=6932639303264928774&sharer_language=es&source=h5_m&u_code=dh7mkbdgdj3l5m&item_author_type=1&tt_from=whatsapp&enable_checksum=1&share_link_id=0E9725A0-647B-412E-8F05-B4290358F2FE&user_id=6932639303264928774&sec_user_id=MS4wLjABAAAAmfuLFKswDJGIzEaNvaU2MqOyYRRK0Pp0Fa9tb0UxsI3xNYdG0mWU4i-S8m2cgm6U&social_share_type=5&ug_btm=b8727,b0&share_app_id=1233" class="social-link"><i class="fab fa-tiktok"></i></a>
 </div>
 
 <footer>
@@ -294,11 +293,25 @@
 </footer>
 
 <script>
+    function abrirModal() {
+    document.getElementById('modalMovimiento').style.display = 'flex';
+}
+
+function cerrarModal() {
+    document.getElementById('modalMovimiento').style.display = 'none';
+}
+
+// Cerrar si hacen clic fuera de la cajita
+window.onclick = function(event) {
+    let modal = document.getElementById('modalMovimiento');
+    if (event.target == modal) {
+        cerrarModal();
+    }
+}
     function showSection(sectionId) {
         document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
         document.getElementById(sectionId).classList.add('active');
         
-        // Estilo activo en nav
         document.querySelectorAll('nav a').forEach(a => {
             a.style.background = 'transparent';
         });
@@ -327,13 +340,33 @@
     }
 }
 
-// Ejecutar al cargar
 window.onload = createParticles;
 </script>
 
 <a href="https://wa.me/5215521022214" class="ws-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
 </a>
+<div id="modalMovimiento" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); backdrop-filter:blur(10px); z-index:3000; align-items:center; justify-content:center;">
+    <div style="background:var(--negro-fondo); border:1px solid var(--azul-electrico); padding:30px; border-radius:30px; max-width:500px; width:90%; position:relative; box-shadow:0 0 30px rgba(0,116,217,0.3);">
+        <button onclick="cerrarModal()" style="position:absolute; top:15px; right:15px; background:none; border:none; color:white; font-size:1.5rem; cursor:pointer;">&times;</button>
+        <h2 style="color:var(--azul-electrico); text-align:center;">Prácticas de Movimiento</h2>
+        <div style="margin-top:20px;">
+            <div style="margin-bottom:20px; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:10px;">
+                <h4 style="margin:0; color:white;">🧘‍♂️ Kinam</h4>
+                <p style="font-size:0.85rem; color:var(--texto-gris); margin:5px 0;">Yoga de origen mexicano para la armonía interna.</p>
+            </div>
+            <div style="margin-bottom:20px; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:10px;">
+                <h4 style="margin:0; color:white;">📍 Movimiento Somático Presencial</h4>
+                <p style="font-size:0.85rem; color:var(--texto-gris); margin:5px 0;">Clases en Casa Dharana y Coyoacán.</p>
+            </div>
+            <div>
+                <h4 style="margin:0; color:white;">💻 Movimiento Somático Online</h4>
+                <p style="font-size:0.85rem; color:var(--texto-gris); margin:5px 0;">Sesiones en vivo desde cualquier lugar.</p>
+            </div>
+        </div>
+        <a href="https://wa.me/5215521022214" class="btn-clase" style="display:block; text-align:center; margin-top:20px;">Más información</a>
+    </div>
+</div>
 
 </body>
 </html>
