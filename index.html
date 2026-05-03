@@ -4,9 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Método Wagner | Conciencia Somática</title>
-    <meta name="description" content="Psicoterapia y conciencia somática con Jorge Wagner. Sesiones individuales, movimiento somático y acompañamiento profesional.">
+    <meta name="description" content="Psicoterapia somática y conciencia corporal con Manu Wagner en Coyoacán, CDMX. Consulta ubicación en Google Maps, sesiones individuales y movimiento somático.">
+    <meta name="keywords" content="psicoterapeuta Manu Wagner, Método Wagner, psicoterapia somática Coyoacán, conciencia somática CDMX, psicólogo Coyoacán">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Método Wagner - Psicoterapia Somática",
+        "alternateName": "Manu Wagner",
+        "description": "Psicoterapia somática, conciencia corporal y movimiento consciente en Coyoacán, CDMX.",
+        "image": "Logo-manu.jpeg",
+        "telephone": "+525521022214",
+        "areaServed": "Coyoacán, Ciudad de México",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Miguel Ángel de Quevedo 980, esquina con Inglaterra",
+            "addressLocality": "Coyoacán",
+            "addressRegion": "CDMX",
+            "postalCode": "04040",
+            "addressCountry": "MX"
+        },
+        "hasMap": "https://share.google/LhodUkBVwurFaR8D9",
+        "sameAs": [
+            "https://www.instagram.com/metodo_wagner",
+            "https://www.tiktok.com/@csomatic"
+        ]
+    }
+    </script>
     <style>
         :root {
             --negro-fondo: #0a0a0a;
@@ -188,6 +214,90 @@
             background: rgba(0, 116, 217, 0.05);
             border-radius: 0 20px 20px 0;
             margin-bottom: 20px;
+        }
+
+        .contact-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: 22px;
+        }
+
+        .location-summary {
+            display: grid;
+            gap: 14px;
+            text-align: left;
+        }
+
+        .location-summary h2 {
+            color: var(--azul-electrico);
+        }
+
+        .location-summary p {
+            margin: 0;
+        }
+
+        .address-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 18px;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 18px;
+            background: rgba(255,255,255,0.03);
+        }
+
+        .address-card i {
+            color: var(--azul-electrico);
+            font-size: 1.35rem;
+            margin-top: 4px;
+        }
+
+        .address-card strong {
+            display: block;
+            color: white;
+            margin-bottom: 4px;
+        }
+
+        .address-card span {
+            color: var(--texto-gris);
+        }
+
+        .map-frame {
+            width: 100%;
+            min-height: 320px;
+            border: 0;
+            border-radius: 22px;
+            background: #111;
+            box-shadow: 0 22px 50px rgba(0,0,0,0.28);
+        }
+
+        .contact-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .btn-maps {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .local-search-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 6px;
+        }
+
+        .local-search-tags span {
+            color: var(--texto-suave);
+            font-size: 0.82rem;
+            padding: 7px 11px;
+            border-radius: 999px;
+            background: rgba(0,116,217,0.12);
+            border: 1px solid rgba(0,116,217,0.24);
         }
 
         /* Redes Sociales */
@@ -509,6 +619,24 @@
         grid-template-columns: 1fr;
     }
 
+    .address-card {
+        flex-direction: column;
+    }
+
+    .map-frame {
+        min-height: 280px;
+        border-radius: 18px;
+    }
+
+    .contact-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .contact-actions .btn-clase {
+        width: 100%;
+    }
+
     .modal-movimiento {
         padding: 12px;
         align-items: flex-start;
@@ -559,7 +687,7 @@
     <a href="#inicio" class="active" data-section="inicio">Inicio</a>
     <a href="#servicios" data-section="servicios">Servicios</a>
     <a href="#testimonios" data-section="testimonios">Opiniones</a>
-    <a href="#contacto" data-section="contacto">Contacto</a>
+    <a href="#contacto" data-section="contacto">Ubicación</a>
 </nav>
 
 <div class="container">
@@ -599,10 +727,44 @@
     </section>
 
     <section id="contacto">
-        <div style="text-align: center;">
-            <h2>¿Comenzamos?</h2>
-            <p>Escríbeme para consultar dudas o disponibilidad de horarios.</p>
-            <a href="https://wa.me/5215521022214?text=Hola%20Jorge%2C%20vi%20tu%20p%C3%A1gina%20web%20del%20M%C3%A9todo%20Wagner%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20sesiones%20y%20horarios." class="btn-clase whatsapp-link" target="_blank" rel="noopener">Mandar WhatsApp</a>
+        <div class="contact-layout">
+            <div class="location-summary">
+                <h2>Psicoterapia somática en Coyoacán</h2>
+                <p>Encuentra a Manu Wagner en Google Maps y agenda por WhatsApp para confirmar disponibilidad, modalidad y horarios.</p>
+
+                <div class="address-card">
+                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                    <div>
+                        <strong>Método Wagner / Psicoterapia Somática</strong>
+                        <span>Miguel Ángel de Quevedo 980, esquina con Inglaterra, Parque San Andrés, Coyoacán, 04040, CDMX.</span>
+                    </div>
+                </div>
+            </div>
+
+            <iframe
+                class="map-frame"
+                title="Ubicación de Manu Wagner en Google Maps"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=Miguel%20%C3%81ngel%20de%20Quevedo%20980%2C%20Parque%20San%20Andr%C3%A9s%2C%20Coyoac%C3%A1n%2C%2004040%2C%20CDMX&output=embed">
+            </iframe>
+
+            <div class="contact-actions">
+                <a href="https://share.google/LhodUkBVwurFaR8D9" class="btn-clase btn-maps" target="_blank" rel="noopener">
+                    <i class="fas fa-map-location-dot" aria-hidden="true"></i>
+                    Abrir Google Maps
+                </a>
+                <a href="https://wa.me/5215521022214?text=Hola%20Jorge%2C%20vi%20tu%20p%C3%A1gina%20web%20del%20M%C3%A9todo%20Wagner%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20sesiones%20y%20horarios." class="btn-clase whatsapp-link" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                    Agendar por WhatsApp
+                </a>
+            </div>
+
+            <div class="local-search-tags" aria-label="Búsquedas relacionadas">
+                <span>Psicoterapeuta Manu Wagner</span>
+                <span>Psicoterapia somática Coyoacán</span>
+                <span>Conciencia corporal CDMX</span>
+            </div>
         </div>
     </section>
 </div>
